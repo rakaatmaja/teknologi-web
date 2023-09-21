@@ -33,4 +33,11 @@
             margin-bottom: 2.5rem;
         }
 
+        .uil-github-alt:hover{
+            color: rgb(0, 0, 207);
+        }
+
+        .uil-github-alt{
+            font-size: x-large;
+        }
         
