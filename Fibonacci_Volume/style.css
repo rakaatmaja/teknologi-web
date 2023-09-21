@@ -24,6 +24,10 @@ body {
     padding-right: 1em;
 }
 
+.pilihan{
+    margin: 10px;
+}
+
 label{
     display: flex;
     margin-bottom: 5px;

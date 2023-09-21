@@ -6,13 +6,42 @@ document.getElementById('inputV').addEventListener('click', function () {
  hitungV();
 });
 
+document.getElementById('pilihan').addEventListener('change', function() {
+  handleDropdownChange();
+});
+
+function handleDropdownChange() {
+  const selectedOption = document.getElementById('pilihan').value;
+  hideAllInputSections();  
+
+  if (selectedOption === 'balok') {
+      document.getElementById('balok-input').style.display = 'block';
+  } else if (selectedOption === 'kubus') {
+      document.getElementById('kubus-input').style.display = 'block';
+  } else if (selectedOption === 'tabung') {
+      document.getElementById('tabung-input').style.display = 'block';
+  }
+}
+
+function hideAllInputSections() {
+  const inputSections = document.querySelectorAll('.input-section');
+  inputSections.forEach(section => {
+      section.style.display = 'none';
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  handleDropdownChange();  
+});
+
+
 function inputFb(){
     const input = parseInt(document.getElementById('inputA').value);
     if (!isNaN(input) && input > 0) {
         const angkaFb = hitungFb(input);
-        document.getElementById('result').innerText = `Deret Fibonacci: ${angkaFb.join(', ')}`;
+        document.getElementById('hasil').innerText = `Deret Fibonacci: ${angkaFb.join(', ')}`;
       } else {
-        document.getElementById('result').innerText = 'Masukkan jumlah angka yang valid.';
+        document.getElementById('hasil').innerText = 'Masukkan jumlah angka yang valid.';
       }
 }
 
@@ -26,14 +55,47 @@ function hitungFb(n) {
 
 
   function hitungV() {
-    const panjang = parseFloat(document.getElementById('panjang').value);
-    const lebar = parseFloat(document.getElementById('lebar').value);
-    const tinggi = parseFloat(document.getElementById('tinggi').value);
-  
-    if (!isNaN(panjang) && !isNaN(lebar) && !isNaN(tinggi) && panjang > 0 && lebar > 0 && tinggi > 0) {
-      const volume = panjang * lebar * tinggi;
-      document.getElementById('resultV').innerText = `Volume: ${volume.toFixed(2)}`;
+    const pilihan = document.getElementById('pilihan').value;
+
+    let volume;
+    switch (pilihan) {
+      case 'balok':
+        volume = hitungVolumeBalok();
+        break;
+      case 'kubus':
+        volume = hitungVolumeKubus();
+        break;
+      case 'tabung':
+        volume = hitungVolumeTabung();
+        break;
+      default:
+        volume = NaN;
+    }
+
+
+    
+    if (!isNaN(volume) && volume > 0) {
+      document.getElementById('hasilV').innerText = `Volume: ${volume.toFixed(2)}`;
     } else {
-      document.getElementById('resultV').innerText = 'Masukkan panjang, lebar, dan tinggi yang valid.';
+      document.getElementById('hasilV').innerText = 'Masukkan ukuran yang valid.';
     }
   }
+
+    function hitungVolumeBalok() {
+      const panjang = parseFloat(document.getElementById('panjang').value);
+      const lebar = parseFloat(document.getElementById('lebar').value);
+      const tinggi = parseFloat(document.getElementById('tinggi').value);
+      return panjang * lebar * tinggi;
+    }
+
+    function hitungVolumeKubus() {
+      const sisi = parseFloat(document.getElementById('sisi').value);
+      return Math.pow(sisi, 3);
+    }
+    
+    function hitungVolumeTabung() {
+      const radiusTabung = parseFloat(document.getElementById('radiusTabung').value);
+      const tinggiTabung = parseFloat(document.getElementById('tinggiTabung').value);
+      return Math.PI * Math.pow(radiusTabung, 2) * tinggiTabung;
+    }
+  
