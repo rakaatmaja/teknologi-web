@@ -25,12 +25,6 @@
             justify-content: center;
         }
 
-        .prose hr {
-            width: 100px;
-            border-color: #7d7d7d4d;
-
-        }
-        
         .content {
             padding: 1.25rem 0;
         }
