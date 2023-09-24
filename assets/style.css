@@ -3,11 +3,15 @@
         h2,
         h3,
         h4 {
-            font-family: "Lexend", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: "Poppins"
+        }
+
+        li{
+            font-size: medium;
         }
 
         body {
-            background-color: #7d7d7d4d;
+            background-color:azure;
             margin: 0;
         }
 
@@ -20,17 +24,13 @@
         }
 
         .content {
+            position: relative;
             display: flex;
-            align-items: center;
+            text-align: center;
             justify-content: center;
-        }
+            padding: 1.25rem ;
+            margin: 1.25rem;
 
-        .content {
-            padding: 1.25rem 0;
-        }
-
-        .content h1 {
-            margin-bottom: 2.5rem;
         }
 
         .uil-github-alt:hover{
