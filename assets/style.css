@@ -11,8 +11,9 @@
         }
 
         body {
-            background-color:azure;
+            background-color: #191d2d;
             margin: 0;
+            color: white;
         }
 
         button {
@@ -34,10 +35,11 @@
         }
 
         .uil-github-alt:hover{
-            color: rgb(0, 0, 207);
+            color: rgb(83, 57, 0);
         }
 
         .uil-github-alt{
             font-size: x-large;
+            color: darkgoldenrod;
         }
         
