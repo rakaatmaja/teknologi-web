@@ -12,3 +12,26 @@ navLinks.forEach((link) => {
   });
 });
 
+const roles = ['Flutter Developer', 'Mobile Developer', 'Software Engineer'];
+let roleIndex = 0;
+let charIndex = 0;
+
+function type() {
+  const role = roles[roleIndex];
+  const textElement = document.getElementById('typed-text');
+  if (charIndex < role.length) {
+    textElement.textContent += role.charAt(charIndex);
+    charIndex++;
+    setTimeout(type, 85); // Kecepatan pengetikan
+  } else {
+
+    setTimeout(() => {
+      textElement.textContent = '';
+      roleIndex = (roleIndex + 1) % roles.length;
+      charIndex = 0;
+      type();
+    }, 500); 
+  }
+}
+type();
+

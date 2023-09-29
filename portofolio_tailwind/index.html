@@ -1,58 +1,415 @@
 <!doctype html>
-<html>
+<html class="p-0 m-0 scroll-smooth box-border">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 </head>
 
-<body class="font-body">
-
-  <nav class="relative bg-white dark:bg-gray-900 w-full  z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 ">
-    <div class="max-w-screen-xl text-lg flex flex-wrap items-center justify-between mx-auto p-5 ">
-      <a href="#" class="flex items-center">
-        <span class="self-center text-3xl font-bold whitespace-nowrap dark:text-white hover:text-blue-500 ">Raka</span>
-      </a>
-      <div class="flex md:order-2">
-        <button data-collapse-toggle="navbar-sticky" type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-sticky" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15" />
-          </svg>
-        </button>
+<body class="font-poppins scroll-smooth">
+  <header>
+    <nav class="fixed bg-white dark:bg-[#111122] w-full z-20 top-0 left-0">
+      <div class="max-w-screen-xl text-2xl flex flex-wrap items-center mx-auto justify-between  p-6 ">
+        <a href="#home" class="flex items-center">
+          <span
+            class="self-center text-4xl font-bold whitespace-nowrap dark:text-white hover:text-blue-500 ">Raka</span>
+        </a>
+        <div class="flex md:order-2">
+          <button id="navbar-toggle" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+        </div>
+        <div id="navbar-sticky" class="hidden items-end justify-self-end  w-full  md:flex md:w-auto md:order-2">
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-[#111122] md:dark:bg-[#111122] dark:dark:bg-[#111122] ">
+            <li>
+              <a href="#home"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 "
+                aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#about"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+            </li>
+            <li>
+              <a href="#skills"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Skills</a>
+            </li>
+            <li>
+              <a href="#projects"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Projects</a>
+            </li>
+            <li>
+              <a href="#footer"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Reach
+                me!</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="items-end justify-self-end hidden w-full  md:flex md:w-auto md:order-2" id="navbar-sticky">
-        <ul
-          class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 ">
-          <li>
-            <a href="#"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 "
-              aria-current="page">Home</a>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Project</a>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-          </li>
-        </ul>
+    </nav>
+  </header>
+
+  <section
+    class=" relative bg-[#111122] text-white min-h-screen py-20 md:py-10 px-10 md:px-32 flex flex-col md:flex-row items-center justify-center"
+    id="home">
+    <div class="md:w-2/5 text-center md:text-left mb-6 md:mb-0">
+      <p class="text-xl md:text-3xl font-bold mb-2">Hi</p>
+      <h2 class="text-2xl md:text-6xl font-medium mb-4">
+        I am
+        <span
+          class="text-6xl md:text-7xl bg-gradient-to-r from-[#43e97b] to-[#38f9d7] bg-clip-text text-transparent">Raka</span>
+      </h2>
+      <h3 id="typed-text" class="text-left text-xl md:text-2xl font-semibold"></h3>
+    </div>
+
+    <div class="md:w-3/5 flex justify-end relative">
+      <img src="./assets/images/me.png" alt="gambar"
+        class="w-full h-auto md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto relative z-10 scale-95 md:scale-100">
+      <div class="absolute top-0 left-0 w-full h-full z-0">
+        <img src="./assets/images/blob.svg" alt="wave"
+          class="w-full h-full md:w-full lg:w-full xl:w-full transform scale-125 md:scale-100"
+          style="filter: brightness(0) invert(29%) sepia(68%) saturate(3802%) hue-rotate(156deg) brightness(92%) contrast(92%);">
       </div>
     </div>
-  </nav>
+
+
+    </div>
+
+
+  </section>
+
+  <section class="about block py-10 md:py-20 px-10 md:px-32 min-w-full" id="about">
+    <h2 class="relative text-3xl md:text-5xl text-[#393e46] font-bold text-center tracking-[1px] mb-8">About Me</h2>
+    <div class="py-10 md:flex md:items-center md:justify-center">
+      <div class="md:w-1/2 px-4 md:px-0 mb-6 md:mb-0">
+        <img src="./assets/images/1.png" class="w-full md:max-w-xs h-auto mx-auto" alt="">
+      </div>
+      <div class="md:w-full md:pl-10">
+        <p class="my-4 text-xl text-[#222831] text-justify leading-7">
+          I am Raka Putra Atmaja, a bachelor of computer science student. <br><br>
+          My passion for software lies with dreaming up ideas and making them come true with elegant interfaces. I take
+          great care in experience, architecture, and code quality of the things I build. <br><br>
+          Outside of programming, I enjoy reading books. I love the pleasure and excitement of gaining new knowledge
+          other than programming from the books I read.
+        </p>
+      </div>
+    </div>
+    <div class="pb-10">
+      <div class="mx-auto w-full md:w-9/12">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/3">
+            <div class="flex items-center">
+              <svg class="stroke-gray-400 stroke-2 h-5 w-5">
+                <line x1="0" y1="10px" x2="10px" y2="10px" />
+              </svg>
+              <h2 class="uppercase text-xs tracking-ngangkang">Organization</h2>
+            </div>
+            <h3 class="text-3xl">Experiences</h3>
+          </div>
+          <div class="md:pl-10 mt-4 md:mt-0">
+            <h4 class="text-2xl font-bold">Mobile Developer</h4>
+            <h5 class="text-sm font-light">Syntax Community</h5>
+            <p class="mt-2 text-light">2019 - 2022</p>
+            <hr class="my-5">
+            <ul class="list-disc list-inside leading-10">
+              <li>Teaching mobile app development with Flutter</li>
+              <li>Teaching basic Dart programming</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block w-full min-h-screen flex flex-col pt-[7rem] pb-[3rem] px-[2rem] bg-[#111122]" id="skills">
+    <h2 class="block relative text-5xl text-[#393e46]  font-bold text-center tracking-[1px] text-white">Skills</h2>
+    <div class="mx-auto my-auto flex  justify-center items-center  flex-wrap ">
+
+      <div class="my-10 mx-[30px] hover:translate-y-[-10px] transition-transform">
+        <div class="w-[70px]">
+          <img src="./assets/images/html.png" alt="">
+        </div>
+        <h3 class="block mx-[10px] mt-[30px] mb[20px] text-[24px] text-center text-[#dcdcdc]">Html</h3>
+      </div>
+      <div class="my-10 mx-[30px] hover:translate-y-[-10px] transition-transform">
+        <div class="w-[70px]">
+          <img src="./assets/images/css.png" alt="">
+        </div>
+        <h3 class="block mx-[10px] mt-[30px] mb[20px] text-[24px] text-center text-[#dcdcdc]">Css</h3>
+      </div>
+      <div class="my-10 mx-[30px] hover:translate-y-[-10px] transition-transform">
+        <div class="w-[70px]">
+          <img src="./assets/images/js.png" alt="">
+        </div>
+        <h3 class="block mx-[10px] mt-[30px] mb[20px] text-[24px] text-center text-[#dcdcdc]">Javascript</h3>
+      </div>
+      <div
+        class="my-10 mx-[30px]  flex flex-col  justify-center items-center hover:translate-y-[-10px] transition-transform ">
+        <div class="w-[70px] block">
+          <img src="./assets/images/flutter.png" alt="" ">
+        </div>
+        <h3 class=" block mx-[10px] mt-[30px] mb[20px] text-[24px] text-center text-[#dcdcdc]">Flutter</h3>
+        </div>
+        <div class="my-10 mx-[30px]  hover:translate-y-[-10px] transition-transform">
+          <div class="w-[70px]">
+            <img src="./assets/images/dart.png" alt="">
+          </div>
+          <h3 class="block mx-[10px] mt-[30px] mb[20px] text-[24px] text-center text-[#dcdcdc]">Dart</h3>
+        </div>
+        <div class="my-10 mx-[30px] hover:translate-y-[-10px] transition-transform">
+          <div class="w-[70px]">
+            <img src="./assets/images/firebase.png" alt="">
+          </div>
+          <h3 class="block mx-[10px] mt-[30px] mb[20px] text-[24px] text-center text-[#dcdcdc]">Firebase</h3>
+        </div>
+        <div class="my-10 mx-[30px] hover:translate-y-[-10px] transition-transform">
+          <div class="w-[70px]">
+            <img src="./assets/images/nuxt.png" alt="">
+          </div>
+          <h3 class="block mx-[10px] mt-[30px] mb[20px] text-[24px] text-center text-[#dcdcdc]">Nuxt</h3>
+        </div>
+
+
+      </div>
+  </section>
+
+  <section class="block pt-[7rem] pb-[2rem] px-[4rem]" id="projects">
+    <div class="block">
+      <h2 class="relative text-center text-5xl font-bold mb-4">Project</h2>
+    </div>
+
+    <div class="my-6 mx-auto flex flex-wrap ">
+
+      <div class="lg:w-1/4 md:w-1/3 sm:w-full p-2 hover:translate-y-[-10px] transition-transform">
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <div class="w-full h-60 min-h-min max-h-fit overflow-hidden flex justify-center">
+            <img src="./assets/images/projects/bekasi.png" alt="Image" class="">
+          </div>
+          <div class="mt-4">
+            <h4 class="text-xl font-bold">Bekasique</h4>
+            <p class="text-gray-700">
+              Provide all information about bekasi, actual and discuss various kinds of updated information and
+              knowledge
+            </p>
+          </div>
+          <div class="flex gap-2 mt-4 w-full overflow-auto">
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Flutter</span>
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Firebase</span>
+            <a href="https://play.google.com/store/apps/details?id=com.planetsbekasi.bekasique" target="_blank"
+              class="ml-auto uil-external-link-alt text-xl"></a>
+          </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="lg:w-1/4 md:w-1/3 sm:w-full p-2 hover:translate-y-[-10px] transition-transform">
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <div class="w-full h-60 overflow-hidden">
+            <img src="./assets/images/projects/sg.png" alt="Image" class="w-full h-full object-cover">
+          </div>
+
+          <div class="mt-4">
+            <h4 class="text-xl font-bold">Sistem Informasi Gudang</h4>
+            <p class="text-gray-700">
+              warehouse stock management information system.
+            </p><br>
+          </div>
+          <div class="flex gap-2 mt-4 w-full overflow-auto">
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Php</span>
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Mysql</span>
+            <a href="https://github.com/rakaatmaja" target="_blank" class="ml-auto uil-external-link-alt text-xl"></a>
+          </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="lg:w-1/4 md:w-1/3 sm:w-full p-2 hover:translate-y-[-10px] transition-transform">
+
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <div class="w-full h-60 min-h-min max-h-fit overflow-hidden flex justify-center">
+            <img src="./assets/images/projects/lovebird.png" alt="Image">
+          </div>
+          <div class="mt-4">
+            <h4 class="text-xl font-bold">Lovebird</h4>
+            <p class="text-gray-700">
+              The app about lovebirds is a digital platform specially designed for lovebird lovers.
+            </p>
+          </div>
+          <div class="flex gap-2 mt-4 w-full overflow-auto">
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Flutter</span>
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Firebase</span>
+            <a href="https://github.com/rakaatmaja/lovebird" target="_blank"
+              class="ml-auto uil-external-link-alt text-xl"></a>
+          </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="lg:w-1/4 md:w-1/3 sm:w-full p-2 hover:translate-y-[-10px] transition-transform">
+
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <div class="w-full h-60 overflow-hidden">
+            <img src="./assets/images/projects/help.png" alt="Image" class="w-full h-full object-cover">
+          </div>
+          <div class="mt-4">
+            <h4 class="text-xl font-bold">Help Medic</h4>
+            <p class="text-gray-700">
+              Telemedic Healthcare Platform that brings comprehensive health services
+              right to your fingertips.
+            </p>
+          </div>
+          <div class="flex gap-2 mt-4 w-full overflow-auto">
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Typescript</span>
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Tailwindcss</span>
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Mysql</span>
+            <a href="https://help-medic.online/" target="_blank" class="ml-auto uil-external-link-alt text-xl"></a>
+          </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="lg:w-1/4 md:w-1/3 sm:w-full p-2 hover:translate-y-[-10px] transition-transform">
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <div class="w-full h-60 min-h-min max-h-fit overflow-hidden flex justify-center">
+            <img src="./assets/images/projects/sholatku-portrait.png" alt="Image">
+          </div>
+          <div class="mt-4">
+            <h4 class="text-xl font-bold">Sholatku</h4>
+            <p class="text-gray-700">
+              Provide information on prayer readings and qibla direction directives.
+            </p><br>
+          </div>
+          <div class="flex gap-2 mt-4 w-full overflow-auto">
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Flutter</span>
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Firebase</span>
+            <a href="https://github.com/rakaatmaja" target="_blank" class="ml-auto uil-external-link-alt text-xl"></a>
+          </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="lg:w-1/4 md:w-1/3 sm:w-full p-2 hover:translate-y-[-10px] transition-transform">
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <div class="w-full h-60 min-h-min max-h-fit overflow-hidden flex justify-center">
+            <img src="./assets/images/projects/anonym-portrait.png" alt="Image">
+          </div>
+          <div class="mt-4">
+            <h4 class="text-xl font-bold">Anonym Chat</h4>
+            <p class="text-gray-700">
+              Provide information on prayer readings and qibla direction directives.
+            </p><br>
+          </div>
+          <div class="flex gap-2 mt-4 w-full overflow-auto">
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Flutter</span>
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Firebase</span>
+            <a href="https://github.com/rakaatmaja/anonymchat" target="_blank"
+              class="ml-auto uil-external-link-alt text-xl"></a>
+          </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="lg:w-1/4 md:w-1/3 sm:w-full p-2 hover:translate-y-[-10px] transition-transform">
+
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <div class="w-full h-60 min-h-min max-h-fit overflow-hidden flex justify-center">
+            <img src="./assets/images/projects/mylist-portrait.png" alt="Image">
+          </div>
+          <div class="mt-4">
+            <h4 class="text-xl font-bold">My List</h4>
+            <p class="text-gray-700">
+              Provide information on prayer readings and qibla direction directives.
+            </p><br>
+          </div>
+          <div class="flex gap-2 mt-4 w-full overflow-auto">
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Flutter</span>
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Firebase</span>
+            <a href="https://github.com/rakaatmaja/todolist" target="_blank"
+              class="ml-auto uil-external-link-alt text-xl"></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="lg:w-1/4 md:w-1/3 sm:w-full p-2 hover:translate-y-[-10px] transition-transform">
+
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <div class="w-full h-60 min-h-min max-h-fit overflow-hidden flex justify-center">
+            <img src="https://rakaatmaja.netlify.app/assets/img/projek/vb.png" alt="Image">
+          </div>
+          <div class="mt-4">
+            <h4 class="text-xl font-bold">School Financial Administration</h4>
+            <p class="text-gray-700">
+              Provide information on prayer readings and qibla direction directives.
+            </p><br>
+          </div>
+          <div class="flex gap-2 mt-4 w-full overflow-auto">
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Visual
+              Studio 2012</span>
+            <span
+              class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm">Guna
+              UI</span>
+            <a href="https://github.com/rakaatmaja" target="_blank" class="ml-auto uil-external-link-alt text-xl"></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="mt-20" id="footer">
+    <div class="container mx-auto">
+      <div class="prose">
+        <h2 class="relative text-center text-5xl font-bold mb-2">Reach Me!</h2>
+        <div class="cards max-w-[300px] mx-auto my-7">
+          <div class="contact | flex items-center gap-3 mb-3">
+            <div class="uil uil-fast-mail-alt text-2xl"></div><a
+              href="raaka.dev@gmail.com"><u>raaka.dev@gmail.com</u></a>
+          </div>
+          <div class="contact | flex items-center gap-3 mb-3">
+            <div class="uil uil-linkedin-alt text-lg"></div><a href="https://www.linkedin.com/in/rakaatmaja/"
+              target="_blank"><u>Raka Atmaja</u></a>
+          </div>
+          <div class="contact | flex items-center gap-3 mb-5">
+            <div class="uil uil-instagram text-lg"></div><a href="https://instagram.com/im_raka"
+              target="_blank"><u>@imraka_a</u></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="text-center text-sm  pt-20 pb-10">2023-PRESENT © Raka Atmaja create with ❤</p>
+  </footer>
+
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
